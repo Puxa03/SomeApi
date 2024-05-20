@@ -28,7 +28,7 @@ builder.Services.AddSwaggerGen(opt =>
 });
 
 var app = builder.Build();
-Thread.Sleep(2000);
+Thread.Sleep(6000);
 using var scope = app.Services.CreateScope();
 var context = scope.ServiceProvider.GetRequiredService<MyDbContext>();
 scope.ServiceProvider.GetRequiredService<MyDbContext>().Database.Migrate();
